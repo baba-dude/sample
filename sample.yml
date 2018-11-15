@@ -1,0 +1,16 @@
+---
+- name: sample
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: pring hello world
+      debug:
+        msg: "hellow world" 
+
+
+    - name: install httpd
+      yum: 
+        name: httpd
+        state: latest
+      become: yes
